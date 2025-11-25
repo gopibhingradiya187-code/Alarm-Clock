@@ -1,0 +1,96 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.best.deskclock"
+        minSdk = 23
+        targetSdk = 35
+        versionCode = 2029
+        versionName = '2.26'
+        ndk {
+            abiFilters = ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64']
+        }
+    }
+
+	def keystorePropertiesFile = rootProject.file("keystore.properties")
+	def keystoreProperties = new Properties()
+    if (keystorePropertiesFile.exists()) {
+        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropertiesFile.exists()) {
+                storeFile = file("$rootDir/keystore.jks")
+                storePassword = keystoreProperties["storePassword"]
+                keyAlias = keystoreProperties["keyAlias"]
+                keyPassword = keystoreProperties["keyPassword"]
+            } else {
+                println "Keystore properties file not found. No signing configuration will be applied."
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable = false
+            manifestPlaceholders = [appName: "@string/app_label"]
+            if (keystorePropertiesFile.exists()) {
+                signingConfig = signingConfigs.findByName("release")
+            } else {
+                signingConfig = null
+            }
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            manifestPlaceholders = [appName: "@string/app_label_debug"]
+            versionNameSuffix = "-debug"
+            applicationIdSuffix = ".debug"
+        }
+    }
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
+            def suffix = variant.buildType.versionNameSuffix ?:
+                    keystorePropertiesFile.exists() ? "-release" : "-unsigned"
+            outputFileName = "Clock_${defaultConfig.versionName}${suffix}.apk"
+        }
+    }
+
+    lintOptions {
+        abortOnError = false
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
+    ndkVersion = '27.2.12479018'
+
+    namespace = 'com.best.deskclock'
+}
+
+dependencies {
+    implementation 'androidx.documentfile:documentfile:1.1.0'
+    implementation 'androidx.media3:media3-exoplayer:1.8.0'
+    implementation 'androidx.media3:media3-common:1.8.0'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.13.0'
+    implementation 'com.github.martin-stone:hsv-alpha-color-picker-android:3.1.0'
+}
