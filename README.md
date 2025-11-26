@@ -11,8 +11,9 @@ Clock is a customizable and privacy-conscious open-source clock, based on AOSP C
   * [Translation](#-translation)
   * [Code Contribution](#-code-contribution)
 - [License](#-license)
-- [Screenshots](#-screenshots)
-- [Credits](#-credits)
+
+[//]: # (- [Screenshots]&#40;#-screenshots&#41;)
+[//]: # (- [Credits]&#40;#-credits&#41;)
 
 # ✨ Features
 * Set the alarms to a specific date;
