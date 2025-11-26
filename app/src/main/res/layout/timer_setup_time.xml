@@ -12,7 +12,7 @@
     android:gravity="center"
     android:layoutDirection="ltr">
 
-    <com.best.deskclock.uicomponents.AutoSizingTextView
+    <com.cubealarm.clock.uicomponents.AutoSizingTextView
         android:id="@+id/timer_setup_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

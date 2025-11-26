@@ -31,7 +31,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_material_you_vertical_digital_widget_background_corner_radius"
             android:title="@string/background_corner_radius_title"
             android:summary="@string/label_default"
@@ -81,7 +81,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_material_you_vertical_digital_widget_custom_background_color"
             android:title="@string/background_color_title"
             android:defaultValue="#70000000"
@@ -98,7 +98,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_material_you_vertical_digital_widget_custom_hours_color"
             android:title="@string/hour_color_title"
             android:defaultValue="#FFFFFF"
@@ -115,7 +115,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_material_you_vertical_digital_widget_custom_minutes_color"
             android:title="@string/minute_color_title"
             android:defaultValue="#FFFFFF"
@@ -132,7 +132,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_material_you_vertical_digital_widget_custom_date_color"
             android:title="@string/date_color_title"
             android:defaultValue="#FFFFFF"
@@ -149,7 +149,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_material_you_vertical_digital_widget_custom_next_alarm_color"
             android:title="@string/next_alarm_color_title"
             android:defaultValue="#FFFFFF"
@@ -166,7 +166,7 @@
         app:iconSpaceReserved="false"
         tools:layout="@layout/settings_preference_category_layout">
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_material_you_vertical_digital_widget_maximum_clock_font_size"
             android:title="@string/max_clock_font_size_title"
             android:summary="@string/label_default"

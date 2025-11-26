@@ -36,7 +36,7 @@
             tools:background="@drawable/bg_card_for_preview"
             tools:backgroundTint="?attr/colorSecondary" />
 
-        <com.best.deskclock.uicomponents.AnalogClock
+        <com.cubealarm.clock.uicomponents.AnalogClock
             android:id="@+id/analog_clock"
             android:layout_width="80dp"
             android:layout_height="80dp"

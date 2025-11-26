@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Copyright (C) 2016 The Android Open Source Project
-    modified
-    SPDX-License-Identifier: Apache-2.0 AND GPL-3.0-only
--->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cubealarm.clock">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -28,10 +24,10 @@
     <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
 
     <application
-        android:name="com.best.deskclock.DeskClockApplication"
+        android:name="com.cubealarm.clock.DeskClockApplication"
         android:allowBackup="false"
         android:appCategory="productivity"
-        android:backupAgent="DeskClockBackupAgent"
+        android:backupAgent="com.cubealarm.clock.DeskClockBackupAgent"
         android:fullBackupContent="@xml/backup_scheme"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupOnly="true"
@@ -48,13 +44,13 @@
         <!-- ============================================================== -->
 
         <activity
-            android:name="com.best.deskclock.FirstLaunch"
+            android:name="com.cubealarm.clock.FirstLaunch"
             android:launchMode="singleTask"
             android:theme="@style/Theme.DeskClock">
         </activity>
 
         <activity
-            android:name="com.best.deskclock.DeskClock"
+            android:name="com.cubealarm.clock.DeskClock"
             android:exported="true"
             android:launchMode="singleTask"
             android:windowSoftInputMode="adjustPan">
@@ -67,36 +63,36 @@
         </activity>
 
         <activity
-            android:name="com.best.deskclock.ringtone.RingtonePickerActivity"
+            android:name="com.cubealarm.clock.ringtone.RingtonePickerActivity"
             android:excludeFromRecents="true"
             android:taskAffinity=""
             android:theme="@style/Theme.DeskClock" />
 
         <activity
-            android:name="com.best.deskclock.worldclock.CitySelectionActivity"
+            android:name="com.cubealarm.clock.worldclock.CitySelectionActivity"
             android:excludeFromRecents="true"
             android:label="@string/cities_activity_title"
-            android:parentActivityName=".DeskClock"
+            android:parentActivityName="com.cubealarm.clock.DeskClock"
             android:taskAffinity=""
             android:theme="@style/Theme.DeskClock" />
 
         <activity
-            android:name="com.best.deskclock.settings.SettingsActivity"
+            android:name="com.cubealarm.clock.settings.SettingsActivity"
             android:excludeFromRecents="true"
             android:label="@string/settings"
-            android:parentActivityName=".DeskClock"
+            android:parentActivityName="com.cubealarm.clock.DeskClock"
             android:taskAffinity=""
             android:theme="@style/Theme.DeskClock" />
 
         <activity
-            android:name="com.best.deskclock.settings.PermissionsManagementActivity"
+            android:name="com.cubealarm.clock.settings.PermissionsManagementActivity"
             android:excludeFromRecents="true"
             android:label="@string/permission_management_settings"
             android:taskAffinity=""
             android:theme="@style/Theme.DeskClock" />
 
         <activity
-            android:name="com.best.deskclock.HandleShortcuts"
+            android:name="com.cubealarm.clock.HandleShortcuts"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:taskAffinity=""
@@ -107,7 +103,7 @@
         <!-- ============================================================== -->
 
         <activity
-            android:name="com.best.deskclock.HandleApiCalls"
+            android:name="com.cubealarm.clock.HandleApiCalls"
             android:directBootAware="true"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
@@ -128,10 +124,10 @@
         </activity>
 
         <activity-alias
-            android:name="com.best.deskclock.HandleSetAlarmApiCalls"
+            android:name="com.cubealarm.clock.HandleSetAlarmApiCalls"
             android:permission="com.android.alarm.permission.SET_ALARM"
             android:exported="true"
-            android:targetActivity="com.best.deskclock.HandleApiCalls">
+            android:targetActivity="com.cubealarm.clock.HandleApiCalls">
             <intent-filter>
                 <action android:name="android.intent.action.SET_ALARM" />
                 <action android:name="android.intent.action.SET_TIMER" />
@@ -145,7 +141,7 @@
         <!-- ============================================================== -->
 
         <activity
-            android:name="com.best.deskclock.alarms.AlarmActivity"
+            android:name="com.cubealarm.clock.alarms.AlarmActivity"
             android:directBootAware="true"
             android:excludeFromRecents="true"
             android:resizeableActivity="false"
@@ -158,24 +154,24 @@
             tools:ignore="DiscouragedApi, NonResizeableActivity" />
 
         <activity
-            android:name="com.best.deskclock.settings.AlarmDisplayPreviewActivity"
+            android:name="com.cubealarm.clock.settings.AlarmDisplayPreviewActivity"
             android:excludeFromRecents="true"
             android:taskAffinity=""
             android:theme="@style/Theme.DeskClock.Wallpaper" />
 
         <activity
-            android:name="com.best.deskclock.AlarmSelectionActivity"
+            android:name="com.cubealarm.clock.AlarmSelectionActivity"
             android:label="@string/dismiss_alarm"
             android:theme="@android:style/Theme.Material.Dialog.NoActionBar" />
 
         <provider
-            android:name="com.best.deskclock.provider.ClockProvider"
+            android:name="com.cubealarm.clock.provider.ClockProvider"
             android:authorities="${applicationId}"
             android:directBootAware="true"
             android:exported="false" />
 
         <receiver
-            android:name="com.best.deskclock.AlarmInitReceiver"
+            android:name="com.cubealarm.clock.AlarmInitReceiver"
             android:directBootAware="true"
             android:exported="true">
             <intent-filter>
@@ -190,11 +186,11 @@
         </receiver>
 
         <receiver
-            android:name="com.best.deskclock.alarms.AlarmStateManager"
+            android:name="com.cubealarm.clock.alarms.AlarmStateManager"
             android:directBootAware="true" />
 
         <service
-            android:name="com.best.deskclock.alarms.AlarmService"
+            android:name="com.cubealarm.clock.alarms.AlarmService"
             android:directBootAware="true"
             android:foregroundServiceType="systemExempted" />
 
@@ -203,7 +199,7 @@
         <!-- ============================================================== -->
 
         <activity
-            android:name="com.best.deskclock.timer.ExpiredTimersActivity"
+            android:name="com.cubealarm.clock.timer.ExpiredTimersActivity"
             android:directBootAware="true"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
@@ -217,7 +213,7 @@
 
         <!-- Legacy broadcast receiver that honors old scheduled timers across app upgrade. -->
         <receiver
-            android:name="com.best.deskclock.timer.TimerReceiver"
+            android:name="com.cubealarm.clock.timer.TimerReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="times_up" />
@@ -225,7 +221,7 @@
         </receiver>
 
         <service
-            android:name="com.best.deskclock.timer.TimerService"
+            android:name="com.cubealarm.clock.timer.TimerService"
             android:description="@string/timer_service_desc"
             android:directBootAware="true"
             android:foregroundServiceType="systemExempted" />
@@ -235,7 +231,7 @@
         <!-- ============================================================== -->
 
         <service
-            android:name="com.best.deskclock.stopwatch.StopwatchService"
+            android:name="com.cubealarm.clock.stopwatch.StopwatchService"
             android:description="@string/stopwatch_service_desc"
             android:directBootAware="true"
             android:foregroundServiceType="systemExempted" />
@@ -246,7 +242,7 @@
         <!-- ============================================================== -->
 
         <activity
-            android:name="com.best.deskclock.screensaver.ScreensaverActivity"
+            android:name="com.cubealarm.clock.screensaver.ScreensaverActivity"
             android:exported="true"
             android:excludeFromRecents="true"
             android:resizeableActivity="false"
@@ -255,13 +251,13 @@
             tools:ignore="DiscouragedApi, NonResizeableActivity" />
 
         <activity
-            android:name="com.best.deskclock.settings.ScreensaverSettingsActivity"
+            android:name="com.cubealarm.clock.settings.ScreensaverSettingsActivity"
             android:excludeFromRecents="true"
             android:taskAffinity=""
             android:theme="@style/Theme.DeskClock" />
 
         <service
-            android:name="com.best.deskclock.screensaver.Screensaver"
+            android:name="com.cubealarm.clock.screensaver.Screensaver"
             android:exported="true"
             android:label="@string/app_label"
             android:permission="android.permission.BIND_DREAM_SERVICE">
@@ -278,7 +274,7 @@
 
         <!-- Receiver for handling the daily update of app widgets at midnight
              and more mainly the widgets that display the date -->
-        <receiver android:name="com.best.deskclock.widgets.DailyWidgetUpdateReceiver"
+        <receiver android:name="com.cubealarm.clock.widgets.DailyWidgetUpdateReceiver"
             android:directBootAware="true">
         </receiver>
 
@@ -288,13 +284,13 @@
 
         <!-- Analog clock -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$AnalogWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$AnalogWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/analog_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.standardwidgets.AnalogAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.standardwidgets.AnalogAppWidgetProvider"
             android:exported="true"
             android:label="@string/analog_widget">
             <intent-filter>
@@ -307,13 +303,13 @@
 
         <!-- Digital clock -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$DigitalWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$DigitalWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/digital_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.standardwidgets.DigitalAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.standardwidgets.DigitalAppWidgetProvider"
             android:exported="true"
             android:label="@string/digital_widget">
             <intent-filter>
@@ -330,18 +326,18 @@
         </receiver>
 
         <service
-            android:name="com.best.deskclock.widgets.AppWidgetCityService$DigitalAppWidgetCityService"
+            android:name="com.cubealarm.clock.widgets.AppWidgetCityService$DigitalAppWidgetCityService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <!-- Vertical digital clock -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$VerticalDigitalWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$VerticalDigitalWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/vertical_digital_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.standardwidgets.VerticalDigitalAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.standardwidgets.VerticalDigitalAppWidgetProvider"
             android:exported="true"
             android:label="@string/vertical_digital_widget">
             <intent-filter>
@@ -358,13 +354,13 @@
 
         <!-- Next alarm -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$NextAlarmWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$NextAlarmWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/next_alarm_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.standardwidgets.NextAlarmAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.standardwidgets.NextAlarmAppWidgetProvider"
             android:exported="true"
             android:label="@string/next_alarm_widget">
             <intent-filter>
@@ -385,13 +381,13 @@
 
         <!-- Analog clock Material You -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$MaterialYouAnalogWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$MaterialYouAnalogWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/analog_widget_material_you"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.materialyouwidgets.MaterialYouAnalogAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.materialyouwidgets.MaterialYouAnalogAppWidgetProvider"
             android:exported="true"
             android:label="@string/analog_widget_material_you">
             <intent-filter>
@@ -408,13 +404,13 @@
 
         <!-- Digital clock Material You -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$MaterialYouDigitalWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$MaterialYouDigitalWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/material_you_digital_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.materialyouwidgets.MaterialYouDigitalAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.materialyouwidgets.MaterialYouDigitalAppWidgetProvider"
             android:exported="true"
             android:label="@string/material_you_digital_widget">
             <intent-filter>
@@ -431,18 +427,18 @@
         </receiver>
 
         <service
-            android:name="com.best.deskclock.widgets.AppWidgetCityService$MaterialYouDigitalAppWidgetCityService"
+            android:name="com.cubealarm.clock.widgets.AppWidgetCityService$MaterialYouDigitalAppWidgetCityService"
             android:permission="android.permission.BIND_REMOTEVIEWS" />
 
         <!-- Vertical digital clock Material You -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$MaterialYouVerticalDigitalWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$MaterialYouVerticalDigitalWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/material_you_vertical_digital_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.materialyouwidgets.MaterialYouVerticalDigitalAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.materialyouwidgets.MaterialYouVerticalDigitalAppWidgetProvider"
             android:exported="true"
             android:label="@string/material_you_vertical_digital_widget">
             <intent-filter>
@@ -459,13 +455,13 @@
 
         <!-- Next alarm Material You -->
         <activity
-            android:name="com.best.deskclock.widgets.WidgetConfiguration$MaterialYouNextAlarmWidgetConfiguration"
+            android:name="com.cubealarm.clock.widgets.WidgetConfiguration$MaterialYouNextAlarmWidgetConfiguration"
             android:excludeFromRecents="true"
             android:label="@string/material_you_next_alarm_widget"
             android:theme="@style/Theme.DeskClock" />
 
         <receiver
-            android:name="com.best.deskclock.widgets.materialyouwidgets.MaterialYouNextAlarmAppWidgetProvider"
+            android:name="com.cubealarm.clock.widgets.materialyouwidgets.MaterialYouNextAlarmAppWidgetProvider"
             android:exported="true"
             android:label="@string/material_you_next_alarm_widget">
             <intent-filter>
@@ -486,7 +482,7 @@
 
         <!-- Alarm tile -->
         <service
-            android:name="com.best.deskclock.tiles.AlarmTileService"
+            android:name="com.cubealarm.clock.tiles.AlarmTileService"
             android:exported="true"
             android:label="@string/menu_alarm"
             android:icon="@drawable/ic_tab_alarm_static"
@@ -498,7 +494,7 @@
 
         <!-- Timer tile -->
         <service
-            android:name="com.best.deskclock.tiles.TimerTileService"
+            android:name="com.cubealarm.clock.tiles.TimerTileService"
             android:exported="true"
             android:label="@string/menu_timer"
             android:icon="@drawable/ic_tab_timer_static"
@@ -510,7 +506,7 @@
 
         <!-- Stopwatch tile -->
         <service
-            android:name="com.best.deskclock.tiles.StopwatchTileService"
+            android:name="com.cubealarm.clock.tiles.StopwatchTileService"
             android:exported="true"
             android:label="@string/menu_stopwatch"
             android:icon="@drawable/ic_tab_stopwatch_static"
@@ -522,7 +518,7 @@
 
         <!-- Screensaver tile -->
         <service
-            android:name="com.best.deskclock.tiles.ScreensaverTileService"
+            android:name="com.cubealarm.clock.tiles.ScreensaverTileService"
             android:exported="true"
             android:label="@string/screensaver_settings_title"
             android:icon="@drawable/ic_screensaver"

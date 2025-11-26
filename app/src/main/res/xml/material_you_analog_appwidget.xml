@@ -15,5 +15,5 @@
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="0"
     android:widgetFeatures="configuration_optional|reconfigurable"
-    android:configure="com.best.deskclock.widgets.WidgetConfiguration$MaterialYouAnalogWidgetConfiguration"
+    android:configure="com.cubealarm.clock.widgets.WidgetConfiguration$MaterialYouAnalogWidgetConfiguration"
     tools:targetApi="p" />

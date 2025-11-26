@@ -47,7 +47,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_next_alarm_widget_background_corner_radius"
             android:title="@string/background_corner_radius_title"
             android:summary="@string/label_default"
@@ -74,7 +74,7 @@
         app:iconSpaceReserved="false"
         tools:layout="@layout/settings_preference_category_layout">
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_next_alarm_widget_background_color"
             android:title="@string/background_color_title"
             android:defaultValue="#70000000"
@@ -91,7 +91,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_next_alarm_widget_custom_title_color"
             android:title="@string/next_alarm_no_upcoming_alarm_titles_color"
             android:defaultValue="#FFFFFF"
@@ -108,7 +108,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_next_alarm_widget_custom_alarm_title_color"
             android:title="@string/alarm_title_color"
             android:defaultValue="#FFFFFF"
@@ -125,7 +125,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_next_alarm_widget_custom_alarm_color"
             android:title="@string/next_alarm_color_title"
             android:defaultValue="#FFFFFF"
@@ -142,7 +142,7 @@
         app:iconSpaceReserved="false"
         tools:layout="@layout/settings_preference_category_layout">
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_next_alarm_widget_maximum_font_size"
             android:title="@string/widget_max_font_size_title"
             android:summary="@string/label_default"

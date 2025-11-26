@@ -67,7 +67,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <com.best.deskclock.uicomponents.AnalogClock
+            <com.cubealarm.clock.uicomponents.AnalogClock
                 android:id="@+id/analog_clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -161,7 +161,7 @@
             tools:background="@drawable/bg_alarm_slide_zone">
 
             <!-- Snooze text -->
-            <com.best.deskclock.uicomponents.AutoSizingTextView
+            <com.cubealarm.clock.uicomponents.AutoSizingTextView
                 android:id="@+id/snooze_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                 tools:textColor="@android:color/white" />
 
             <!-- Dismiss text -->
-            <com.best.deskclock.uicomponents.AutoSizingTextView
+            <com.cubealarm.clock.uicomponents.AutoSizingTextView
                 android:id="@+id/dismiss_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
                 tools:textColor="@android:color/white" />
 
             <!-- Pill in the background of the Alarm button -->
-            <com.best.deskclock.uicomponents.PillView
+            <com.cubealarm.clock.uicomponents.PillView
                 android:id="@+id/pill"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"

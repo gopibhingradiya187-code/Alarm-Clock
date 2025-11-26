@@ -40,7 +40,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_running_timer_indicator_color"
             android:title="@string/running_timer_indicator_color_title"
             android:defaultValue="#FF99CC00"
@@ -49,7 +49,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_paused_timer_indicator_color"
             android:title="@string/paused_timer_indicator_color_title"
             android:defaultValue="#FFFFBB33"
@@ -58,7 +58,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.ColorPickerPreference
+        <com.cubealarm.clock.settings.ColorPickerPreference
             android:key="key_expired_timer_indicator_color"
             android:title="@string/expired_timer_indicator_color_title"
             android:defaultValue="#FFFF4444"
@@ -82,14 +82,14 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.AutoSilenceDurationPreference
+        <com.cubealarm.clock.settings.AutoSilenceDurationPreference
             android:key="key_timer_auto_silence_duration"
             android:title="@string/auto_silence_title"
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.VolumeCrescendoDurationPreference
+        <com.cubealarm.clock.settings.VolumeCrescendoDurationPreference
             android:key="key_timer_volume_crescendo_duration"
             android:title="@string/crescendo_duration_title"
             app:iconSpaceReserved="false"
@@ -146,7 +146,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_timer_shake_intensity"
             android:title="@string/shake_intensity_title"
             android:summary="@string/label_default"
@@ -174,7 +174,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.TimerAddTimeButtonValuePreference
+        <com.cubealarm.clock.settings.TimerAddTimeButtonValuePreference
             android:key="key_timer_add_time_button_value"
             android:title="@string/default_time_to_add_to_timer_title"
             app:iconSpaceReserved="false"

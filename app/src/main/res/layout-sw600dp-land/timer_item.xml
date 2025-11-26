@@ -6,7 +6,7 @@
 -->
 
 <!-- This TimerItem includes the circle because ample space exists. -->
-<com.best.deskclock.timer.TimerItem
+<com.cubealarm.clock.timer.TimerItem
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toStartOf="@+id/indicator_state"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.best.deskclock.uicomponents.CircleButtonsLayout
+    <com.cubealarm.clock.uicomponents.CircleButtonsLayout
         android:id="@+id/circle_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -79,13 +79,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="InconsistentLayout">
 
-        <com.best.deskclock.timer.TimerCircleView
+        <com.cubealarm.clock.timer.TimerCircleView
             android:id="@+id/timer_time"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:ignore="InconsistentLayout" />
 
-        <com.best.deskclock.uicomponents.AutoSizingTextView
+        <com.cubealarm.clock.uicomponents.AutoSizingTextView
             android:id="@+id/timer_time_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
             android:contentDescription="@string/reset"
             app:tint="?attr/colorPrimary" />
 
-    </com.best.deskclock.uicomponents.CircleButtonsLayout>
+    </com.cubealarm.clock.uicomponents.CircleButtonsLayout>
 
     <ImageButton
         android:id="@+id/timer_edit_new_duration_button"
@@ -151,4 +151,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:icon="@drawable/ic_fab_play" />
 
-</com.best.deskclock.timer.TimerItem>
+</com.cubealarm.clock.timer.TimerItem>

@@ -12,11 +12,11 @@
     android:baselineAligned="false"
     android:orientation="horizontal">
 
-    <com.best.deskclock.stopwatch.StopwatchLandscapeLayout
+    <com.cubealarm.clock.stopwatch.StopwatchLandscapeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.best.deskclock.stopwatch.StopwatchCircleFrameLayout
+        <com.cubealarm.clock.stopwatch.StopwatchCircleFrameLayout
             android:id="@+id/stopwatch_time_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,13 +25,13 @@
             <include layout="@layout/stopwatch_time" />
 
             <!-- Sufficient space exists to include the bounding stopwatch circle. -->
-            <com.best.deskclock.stopwatch.StopwatchCircleView
+            <com.cubealarm.clock.stopwatch.StopwatchCircleView
                 android:id="@+id/stopwatch_circle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:ignore="InconsistentLayout" />
 
-        </com.best.deskclock.stopwatch.StopwatchCircleFrameLayout>
+        </com.cubealarm.clock.stopwatch.StopwatchCircleFrameLayout>
 
         <!-- Due to the ViewPager and the location of FAB, paddings are set
              in the StopwatchFragment.java file and in the LapsAdapter.java file. -->
@@ -41,6 +41,6 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false" />
 
-    </com.best.deskclock.stopwatch.StopwatchLandscapeLayout>
+    </com.cubealarm.clock.stopwatch.StopwatchLandscapeLayout>
 
 </LinearLayout>

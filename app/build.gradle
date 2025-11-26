@@ -6,11 +6,11 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.best.deskclock"
+        applicationId = "com.cubealarm.clock"
         minSdk = 23
         targetSdk = 35
-        versionCode = 2029
-        versionName = '2.26'
+        versionCode = 1
+        versionName = '1.0'
         ndk {
             abiFilters = ['armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64']
         }
@@ -82,7 +82,7 @@ android {
 
     ndkVersion = '27.2.12479018'
 
-    namespace = 'com.best.deskclock'
+    namespace = 'com.cubealarm.clock'
 }
 
 dependencies {

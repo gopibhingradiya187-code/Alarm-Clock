@@ -64,7 +64,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.AutoSilenceDurationPreference
+        <com.cubealarm.clock.settings.AutoSilenceDurationPreference
             android:key="key_auto_silence_duration"
             android:title="@string/auto_silence_title"
             app:iconSpaceReserved="false"
@@ -79,7 +79,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.AlarmSnoozeDurationPreference
+        <com.cubealarm.clock.settings.AlarmSnoozeDurationPreference
             android:key="key_alarm_snooze_duration"
             android:title="@string/snooze_duration_title"
             app:iconSpaceReserved="false"
@@ -112,7 +112,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.AlarmVolumePreference
+        <com.cubealarm.clock.settings.AlarmVolumePreference
             android:key="key_volume_setting"
             android:title="@string/alarm_volume_title"
             android:summary="0"
@@ -128,7 +128,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.VolumeCrescendoDurationPreference
+        <com.cubealarm.clock.settings.VolumeCrescendoDurationPreference
             android:key="key_alarm_volume_crescendo_duration"
             android:title="@string/crescendo_duration_title"
             app:iconSpaceReserved="false"
@@ -161,7 +161,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_bluetooth_volume"
             android:title="@string/bluetooth_volume_title"
             android:summary="@string/label_default"
@@ -219,7 +219,7 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.CustomSeekbarPreference
+        <com.cubealarm.clock.settings.CustomSeekbarPreference
             android:key="key_shake_intensity"
             android:title="@string/shake_intensity_title"
             android:summary="@string/label_default"
@@ -292,14 +292,14 @@
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.VibrationPatternPreference
+        <com.cubealarm.clock.settings.VibrationPatternPreference
             android:key="key_vibration_pattern"
             android:title="@string/vibration_pattern_title"
             app:iconSpaceReserved="false"
             app:singleLineTitle="false"
             tools:layout="@layout/settings_preference_layout" />
 
-        <com.best.deskclock.settings.VibrationStartDelayPreference
+        <com.cubealarm.clock.settings.VibrationStartDelayPreference
             android:key="key_vibration_start_delay"
             android:title="@string/vibration_start_delay_title"
             app:iconSpaceReserved="false"

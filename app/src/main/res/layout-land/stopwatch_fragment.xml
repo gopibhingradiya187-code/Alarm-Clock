@@ -11,7 +11,7 @@
     android:baselineAligned="false"
     android:orientation="horizontal">
 
-    <com.best.deskclock.stopwatch.StopwatchLandscapeLayout
+    <com.cubealarm.clock.stopwatch.StopwatchLandscapeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -33,6 +33,6 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false" />
 
-    </com.best.deskclock.stopwatch.StopwatchLandscapeLayout>
+    </com.cubealarm.clock.stopwatch.StopwatchLandscapeLayout>
 
 </LinearLayout>

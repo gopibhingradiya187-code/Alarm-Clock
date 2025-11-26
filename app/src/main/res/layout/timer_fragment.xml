@@ -24,12 +24,12 @@
 
     </FrameLayout>
 
-    <com.best.deskclock.timer.TimerSetupView
+    <com.cubealarm.clock.timer.TimerSetupView
         android:id="@+id/timer_setup"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <com.best.deskclock.timer.CustomTimerSpinnerSetupView
+    <com.cubealarm.clock.timer.CustomTimerSpinnerSetupView
         android:id="@+id/timer_spinner_setup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

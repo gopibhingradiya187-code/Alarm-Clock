@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.best.deskclock.uicomponents.TextTime
+    <com.cubealarm.clock.uicomponents.TextTime
         android:id="@+id/digital_clock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@id/label"
         tools:text="08:30" />
 
-    <com.best.deskclock.uicomponents.AutoSizingTextView
+    <com.cubealarm.clock.uicomponents.AutoSizingTextView
         android:id="@+id/days_of_week"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
