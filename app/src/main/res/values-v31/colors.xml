@@ -6,7 +6,7 @@
 <resources>
     <!-- MATERIAL COLORS -->
     <!-- Source: https://github.com/material-components/material-components-android/blob/master/docs/theming/Color.md -->
-    <color name="md_theme_primary">@android:color/system_accent1_600</color>
+    <color name="md_theme_primary">#2F6AE0</color>
     <color name="md_theme_onPrimary">@android:color/system_accent1_0</color>
     <color name="md_theme_primaryContainer">@android:color/system_accent1_100</color>
     <color name="md_theme_onPrimaryContainer">@android:color/system_accent1_900</color>

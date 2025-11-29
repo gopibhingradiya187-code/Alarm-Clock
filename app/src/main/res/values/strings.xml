@@ -1510,4 +1510,11 @@
     <!-- Toast message when restore is complete -->
     <string name="toast_message_for_restore">Restore completed</string>
     <string name="agree_continue"><![CDATA[Agree & Continue]]></string>
+
+
+    <string name="agree_continue"><![CDATA[Agree & Continue]]></string>
+    <string name="privacy_policy_url">\"A\"</string>
+    <string name="reliable_alarms">Own your morning</string>
+    <string name="for_better_mornings">own your day.</string>
+
 </resources>

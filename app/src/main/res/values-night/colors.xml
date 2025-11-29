@@ -9,7 +9,7 @@
     Source: https://github.com/material-components/material-components-android/blob/master/docs/theming/Color.md
     Converted to hex value
     -->
-    <color name="md_theme_primary">#B0C6FF</color>
+    <color name="md_theme_primary">#2F6AE0</color>
     <color name="md_theme_onPrimary">#152E60</color>
     <color name="md_theme_primaryContainer">#2F4578</color>
     <color name="md_theme_onPrimaryContainer">#D9E2FF</color>

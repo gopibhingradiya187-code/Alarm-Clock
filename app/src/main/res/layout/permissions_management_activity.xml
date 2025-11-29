@@ -64,13 +64,11 @@
                     android:layout_marginTop="@dimen/_5sdp"
                     android:src="@drawable/ic_notifications"/>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_7sdp"
                     android:orientation="vertical">
-
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvNotifyTitle"
@@ -79,7 +77,6 @@
                         android:text="Notification"
                         android:textSize="@dimen/_15ssp"
                         android:fontFamily="@font/roboto_medium" />
-
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvNotifyDesc"
@@ -101,20 +98,17 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp">
 
-
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:src="@drawable/ic_battery_settings"/>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_7sdp"
                     android:orientation="vertical">
-
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvBatteryTitle"
@@ -123,7 +117,6 @@
                         android:text="@string/ignore_battery_optimizations_dialog_title"
                         android:textSize="@dimen/_15ssp"
                         android:fontFamily="@font/roboto_medium" />
-
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvBatteryDesc"
@@ -134,10 +127,7 @@
                         android:layout_marginTop="@dimen/_3sdp"
                         android:fontFamily="@font/roboto" />
 
-
-
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -150,20 +140,17 @@
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp">
 
-
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:src="@drawable/ic_fullscreen"/>
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_7sdp"
                     android:orientation="vertical">
-
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvFullScreenNotifyTitle"
@@ -172,7 +159,6 @@
                         android:text="Full-Screen Notification"
                         android:textSize="@dimen/_15ssp"
                         android:fontFamily="@font/roboto_medium" />
-
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/tvFullScreenNotifyDesc"
@@ -183,11 +169,7 @@
                         android:layout_marginTop="@dimen/_3sdp"
                         android:fontFamily="@font/roboto" />
 
-
-
-
                 </LinearLayout>
-
 
             </LinearLayout>
 
