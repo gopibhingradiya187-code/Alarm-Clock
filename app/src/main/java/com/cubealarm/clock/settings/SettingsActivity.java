@@ -6,7 +6,7 @@
 
 package com.cubealarm.clock.settings;
 
-import static com.cubealarm.clock.settings.PermissionsManagementActivity.PermissionsManagementFragment.areEssentialPermissionsNotGranted;
+import static com.cubealarm.clock.settings.PermissionsManagementActivity.areEssentialPermissionsNotGranted;
 import static com.cubealarm.clock.settings.PreferencesKeys.KEY_ALARM_SETTINGS;
 import static com.cubealarm.clock.settings.PreferencesKeys.KEY_BACKUP_RESTORE_PREFERENCES;
 import static com.cubealarm.clock.settings.PreferencesKeys.KEY_CLOCK_SETTINGS;
@@ -238,7 +238,9 @@ public final class SettingsActivity extends CollapsingToolbarBaseActivity {
                 case KEY_WIDGETS_SETTINGS -> animateAndShowFragment(new WidgetSettingsFragment());
 
                 case KEY_PERMISSION_MESSAGE, KEY_PERMISSIONS_MANAGEMENT ->
-                    animateAndShowFragment(new PermissionsManagementActivity.PermissionsManagementFragment());
+                        startActivity(new Intent(requireActivity(), PermissionsManagementActivity.class));
+
+//                animateAndShowFragment(new PermissionsManagementActivity.PermissionsManagementFragment());
 
                 case KEY_BACKUP_RESTORE_PREFERENCES ->
                     new MaterialAlertDialogBuilder(requireContext())

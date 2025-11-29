@@ -73,6 +73,9 @@ android {
 
     buildFeatures {
         buildConfig = true
+        viewBinding = true
+        dataBinding = true
+
     }
 
     dependenciesInfo {
@@ -93,4 +96,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
     implementation 'com.google.android.material:material:1.13.0'
     implementation 'com.github.martin-stone:hsv-alpha-color-picker-android:3.1.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
+    implementation 'com.intuit.ssp:ssp-android:1.1.1'
+
 }

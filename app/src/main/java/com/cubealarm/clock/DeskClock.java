@@ -12,7 +12,7 @@ import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_DRAGGING;
 import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_IDLE;
 import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_SETTLING;
 import static com.cubealarm.clock.DeskClockApplication.getDefaultSharedPreferences;
-import static com.cubealarm.clock.settings.PermissionsManagementActivity.PermissionsManagementFragment.areEssentialPermissionsNotGranted;
+import static com.cubealarm.clock.settings.PermissionsManagementActivity.areEssentialPermissionsNotGranted;
 import static com.cubealarm.clock.settings.PreferencesDefaultValues.AMOLED_DARK_MODE;
 import static com.cubealarm.clock.settings.PreferencesDefaultValues.DEFAULT_TAB_TITLE_VISIBILITY;
 import static com.cubealarm.clock.settings.PreferencesDefaultValues.TAB_TITLE_VISIBILITY_NEVER;

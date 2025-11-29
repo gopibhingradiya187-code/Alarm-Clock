@@ -80,8 +80,8 @@ public final class ClockFragment extends DeskClockFragment {
     private SharedPreferences mPrefs;
     private DisplayMetrics mDisplayMetrics;
     private final List<City> mMutableCities = new ArrayList<>();
-    private View mClockFrame;
-    private View mEmptyCityViewRightPanel;
+//    private View mClockFrame;
+//    private View mEmptyCityViewRightPanel;
     private SelectedCitiesAdapter mCityAdapter;
     private String mDateFormat;
     private String mDateFormatForAccessibility;
@@ -126,22 +126,22 @@ public final class ClockFragment extends DeskClockFragment {
 
         // On landscape mode, the clock frame will be a distinct view.
         // Otherwise, it'll be added on as a header to the main listview.
-        mClockFrame = fragmentView.findViewById(R.id.main_clock_left_panel);
-        if (mClockFrame != null) {
-            DataModel.ClockStyle clockStyle = SettingsDAO.getClockStyle(mPrefs);
-            TextClock digitalClock = mClockFrame.findViewById(R.id.digital_clock);
-            AnalogClock analogClock = mClockFrame.findViewById(R.id.analog_clock);
-            boolean showSeconds = SettingsDAO.areClockSecondsDisplayed(mPrefs);
+//        mClockFrame = fragmentView.findViewById(R.id.main_clock_left_panel);
+//        if (mClockFrame != null) {
+//            DataModel.ClockStyle clockStyle = SettingsDAO.getClockStyle(mPrefs);
+//            TextClock digitalClock = mClockFrame.findViewById(R.id.digital_clock);
+//            AnalogClock analogClock = mClockFrame.findViewById(R.id.analog_clock);
+//            boolean showSeconds = SettingsDAO.areClockSecondsDisplayed(mPrefs);
+//
+//            mClockFrame.setPadding(0, 0, 0, 0);
+//
+//            ClockUtils.setClockIconTypeface(mClockFrame);
+//            ClockUtils.updateDate(mDateFormat, mDateFormatForAccessibility, mClockFrame);
+//            ClockUtils.setClockStyle(clockStyle, digitalClock, analogClock);
+//            ClockUtils.setClockSecondsEnabled(clockStyle, digitalClock, analogClock, showSeconds);
+//        }
 
-            mClockFrame.setPadding(0, 0, 0, 0);
-
-            ClockUtils.setClockIconTypeface(mClockFrame);
-            ClockUtils.updateDate(mDateFormat, mDateFormatForAccessibility, mClockFrame);
-            ClockUtils.setClockStyle(clockStyle, digitalClock, analogClock);
-            ClockUtils.setClockSecondsEnabled(clockStyle, digitalClock, analogClock, showSeconds);
-        }
-
-        mEmptyCityViewRightPanel = fragmentView.findViewById(R.id.empty_city_view_right_panel);
+//        mEmptyCityViewRightPanel = fragmentView.findViewById(R.id.empty_city_view_right_panel);
 
         final RecyclerView cityList = fragmentView.findViewById(R.id.cities);
         cityList.setAdapter(mCityAdapter);
@@ -284,7 +284,7 @@ public final class ClockFragment extends DeskClockFragment {
 
         refreshAlarm();
 
-        if (mEmptyCityViewRightPanel != null) {
+        /*if (mEmptyCityViewRightPanel != null) {
             if (!mShowHomeClock && mCityAdapter.getCities().isEmpty()) {
                 mEmptyCityViewRightPanel.setVisibility(VISIBLE);
 
@@ -295,7 +295,7 @@ public final class ClockFragment extends DeskClockFragment {
             } else {
                 mEmptyCityViewRightPanel.setVisibility(GONE);
             }
-        }
+        }*/
     }
 
     @Override
@@ -357,22 +357,14 @@ public final class ClockFragment extends DeskClockFragment {
      * Refresh the next alarm time.
      */
     private void refreshAlarm() {
-        if (mClockFrame != null) {
-            AlarmUtils.refreshAlarm(getContext(), mClockFrame);
-        } else {
+//        if (mClockFrame != null) {
+//            AlarmUtils.refreshAlarm(getContext(), mClockFrame);
+//        } else {
             mCityAdapter.refreshAlarm();
-        }
+//        }
     }
 
-    /**
-     * Updates the note associated with a specific city by delegating to the adapter.
-     * <p>
-     * This method is typically called by the hosting activity after the user saves a city note
-     * via the dialog. It ensures that the adapter updates the displayed note and persists it as needed.
-     *
-     * @param cityId the unique identifier of the city whose note is being updated
-     * @param note   the new note text to associate with the city
-     */
+
     public void setCityNote(String cityId, String note) {
         mCityAdapter.setCityNote(cityId, note);
     }

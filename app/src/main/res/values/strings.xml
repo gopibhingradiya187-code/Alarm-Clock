@@ -1509,4 +1509,5 @@
     <string name="toast_message_for_backup">Backup completed</string>
     <!-- Toast message when restore is complete -->
     <string name="toast_message_for_restore">Restore completed</string>
+    <string name="agree_continue"><![CDATA[Agree & Continue]]></string>
 </resources>

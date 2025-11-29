@@ -84,7 +84,7 @@ public class BaseActivity extends AppCompatActivity {
      */
     private static final Map<Activity, SharedPreferences.OnSharedPreferenceChangeListener> mListenerMap = new WeakHashMap<>();
 
-    private SharedPreferences mPrefs;
+    public SharedPreferences mPrefs;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
